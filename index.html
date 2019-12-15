@@ -52,8 +52,14 @@
 		<script src="dist/index.umd.js"></script>
 
 		<script>
-		  // Sends event to client
-		  vkConnect.send('VKWebAppInit');
+		  // Подписывается на события, отправленные нативным клиентом 
+		connect.subscribe((e) => console.log(e)); 
+		// Отправляет событие нативному клиенту 
+		connect.send("VKWebAppInit", {}); 	
+		// Проверяет, поддерживается ли событие на текущей платформе. 
+		if (connect.supports("VKWebAppResizeWindow")) { 
+    		connect.send("VKWebAppResizeWindow", {"width": 800, "height": 1000}); 
+		}
 		</script>
 		<script type="text/javascript" src="/assets/js/vendor/head.js?v=2.0.3"></script>
 		<script type="text/javascript" src="/assets/js/index.js?v=2.0.3"></script>
