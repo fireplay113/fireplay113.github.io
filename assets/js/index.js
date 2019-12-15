@@ -1,4 +1,3 @@
-import connect from '@vkontakte/vk-connect'; 
 
 var resources = [
 	"//fonts.googleapis.com/css?family=Noto+Sans&subset=latin,cyrillic",
@@ -16,8 +15,7 @@ var resources = [
 	"/assets/js/plugins/shapetext.js"
 ];
 
-// Отправляет событие нативному клиенту 
-connect.send("VKWebAppInit", {});
+
 
 head.load('//www.google-analytics.com/analytics.js', function() {
 	ga('create', 'UA-62568351-1', 'auto');
