@@ -14,8 +14,6 @@ var resources = [
 	"/assets/js/plugins/shapetext.js"
 ];
 
-
-
 head.load('//www.google-analytics.com/analytics.js', function() {
 	ga('create', 'UA-62568351-1', 'auto');
 	ga('send', 'pageview');
