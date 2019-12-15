@@ -68,7 +68,7 @@ head.load(resources, function() {
 			      )
 				},
 				// после завершения тряски
-				complete: function() {
+				complete: function () {
 					// возвращается текст
 					text.velocity({opacity: 1, scale: 1}, {duration: 100});
 					// выводится текст
