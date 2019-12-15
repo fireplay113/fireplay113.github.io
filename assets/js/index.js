@@ -234,4 +234,4 @@ head.load(resources, function() {
 		}
 	});
 
-});
+
