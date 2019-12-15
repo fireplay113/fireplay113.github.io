@@ -234,3 +234,4 @@ head.load(resources, function() {
 		}
 	});
 
+});
