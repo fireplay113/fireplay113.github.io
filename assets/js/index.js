@@ -64,7 +64,7 @@ head.load(resources, function() {
 					text.velocity({opacity: 0, scale: 1.5}, {duration: 100});
 					//убирается синий фон
 					ball.addClass('ball--transition');
-						}}
+						}
 			      )
 				},
 				// после завершения тряски
