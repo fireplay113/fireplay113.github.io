@@ -14,8 +14,6 @@ var resources = [
 	"/assets/js/plugins/shapetext.js"
 ];
 
-
-
 head.load('//www.google-analytics.com/analytics.js', function() {
 	ga('create', 'UA-62568351-1', 'auto');
 	ga('send', 'pageview');
@@ -64,13 +62,20 @@ head.load(resources, function() {
 					text.velocity({opacity: 0, scale: 1.5}, {duration: 100});
 					//убирается синий фон
 					ball.addClass('ball--transition');
-						}
-			      )
+					// убираются социалки
+					share.velocity("transition.whirlOut", {duration: 400});
+					if(shareNets.data("opened")) {
+						shareNets.velocity("transition.whirlOut", {duration: 200, complete: function() {
+							shareNets.data("opened", false);
+						}});
+					}
 				},
 				// после завершения тряски
-				complete: function () {
+				complete: function() {
 					// возвращается текст
 					text.velocity({opacity: 1, scale: 1}, {duration: 100});
+					// возвращаются социалки
+					share.removeClass("is-none").velocity("transition.whirlIn", {duration: 400});
 					// выводится текст
 					setAnswer();
 					// добавляется синий фон
@@ -198,6 +203,8 @@ head.load(resources, function() {
 
 					// возвращается текст
 					$(".ball-textbox").velocity({opacity: 1, scale: 1}, {duration: 100});
+					// возвращаются социалки
+					$(".share").removeClass("is-none").velocity("transition.whirlIn", {duration: 400});
 					// выводится текст
 					setAnswer();
 					// добавляется синий фон
@@ -235,3 +242,4 @@ head.load(resources, function() {
 	});
 
 });
+
