@@ -233,20 +233,3 @@ head.load(resources, function() {
 	});
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
