@@ -66,9 +66,11 @@ head.load(resources, function() {
 		}
 				),
 				// после завершения тряски
-				complete: function () {
+				complete: function() {
 					// возвращается текст
-					text.velocity({opacity: 1, scale: 1}, {duration: 100});
+					// text.velocity({opacity: 1, scale: 1}, {duration: 100});
+					// возвращаются социалки
+					share.removeClass("is-none").velocity("transition.whirlIn", {duration: 400});
 					// выводится текст
 					setAnswer();
 					// добавляется синий фон
