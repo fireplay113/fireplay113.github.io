@@ -1,19 +1,9 @@
 // $Id: index.js 256 2015-05-04 07:37:19Z hayk $
 // µ Հ
 import connect from '@vkontakte/vk-connect'; 
-
 // Отправляет событие нативному клиенту 
 connect.send("VKWebAppInit", {});
-// Подписывается на события, отправленные нативным клиентом 
-connect.subscribe((e) => console.log(e)); 
 
-// Отправляет событие нативному клиенту 
-connect.send("VKWebAppInit", {}); 
-
-// Проверяет, поддерживается ли событие на текущей платформе. 
-if (connect.supports("VKWebAppResizeWindow")) { 
-    connect.send("VKWebAppResizeWindow", {"width": 800, "height": 1000}); 
-}
 var resources = [
 	"//fonts.googleapis.com/css?family=Noto+Sans&subset=latin,cyrillic",
 	"//fonts.googleapis.com/earlyaccess/notosansarmenian.css",
