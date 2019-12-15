@@ -1,4 +1,3 @@
-
 var resources = [
 	"//fonts.googleapis.com/css?family=Noto+Sans&subset=latin,cyrillic",
 	"//fonts.googleapis.com/earlyaccess/notosansarmenian.css",
