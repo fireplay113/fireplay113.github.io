@@ -66,7 +66,7 @@ head.load(resources, function() {
 		}
 				),
 				// после завершения тряски
-				complete: function() {
+				complete( function() {
 					// возвращается текст
 					// text.velocity({opacity: 1, scale: 1}, {duration: 100});
 					// возвращаются социалки
@@ -77,7 +77,7 @@ head.load(resources, function() {
 					ball.removeClass("ball--transition");
 					$.runFromInput = false;
 					$('#yourq').focus();
-				}
+				})
 			});
 	});
 
